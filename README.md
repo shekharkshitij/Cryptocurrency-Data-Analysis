@@ -1,4 +1,4 @@
-# Cryptocurrency Data Fetcher
+# Cryptocurrency Data Analysis
 
 This Jupyter Notebook retrieves the latest cryptocurrency data from the CoinMarketCap API, processes it, and visualizes trends over time. It fetches real-time information about the top 15 cryptocurrencies by market capitalization.
 
