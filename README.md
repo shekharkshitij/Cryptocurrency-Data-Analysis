@@ -29,13 +29,13 @@ To use this script, you'll need a CoinMarketCap API key. You can obtain one by s
    Clone the repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/shekharkshitij/cryptocurrency-data-fetcher.git
+   git clone https://github.com/shekharkshitij/Cryptocurrency-Data-Analysis.git
    cd cryptocurrency-data-fetcher
    ```
 
 2. **Update API Key:**
 
-   Open the script and replace the placeholder API key with your actual CoinMarketCap API key:
+   Open the script `/Automate API Extraction + Appending Data + Extra -- Project.ipynb` and replace the placeholder API key with your actual CoinMarketCap API key:
 
    ```python
    headers = {
@@ -49,7 +49,7 @@ To use this script, you'll need a CoinMarketCap API key. You can obtain one by s
    You can run the script by executing:
 
    ```bash
-   python script_name.py
+   jupyter notebook "Automate API Extraction + Appending Data + Extra -- Project.ipynb"
    ```
 
    Make sure you are in the directory where the script is located.
