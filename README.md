@@ -1,11 +1,10 @@
-```markdown
 # Cryptocurrency Data Fetcher
 
-This script retrieves the latest cryptocurrency data from the CoinMarketCap API, processes the data, and visualizes trends over time. It uses the CoinMarketCap API to get real-time information about the top 15 cryptocurrencies by market capitalization.
+This Jupyter Notebook retrieves the latest cryptocurrency data from the CoinMarketCap API, processes it, and visualizes trends over time. It fetches real-time information about the top 15 cryptocurrencies by market capitalization.
 
 ## Prerequisites
 
-To run this script, you'll need to have Python 3.x installed along with the following Python packages:
+To run this notebook, you'll need to have Python 3.x installed along with the following Python packages:
 
 - `requests`
 - `pandas`
@@ -16,11 +15,17 @@ You can install these dependencies using pip:
 
 ```bash
 pip install requests pandas matplotlib seaborn
-```
 
 ## API Key
 
-To use this script, you'll need a CoinMarketCap API key. You can obtain one by signing up at [CoinMarketCap Developer Portal](https://pro.coinmarketcap.com/). Once you have the API key, replace `'your_api_key_here'` in the script with your actual key.
+To use this notebook, you'll need a CoinMarketCap API key. You can obtain one by signing up at the [CoinMarketCap Developer Portal](https://pro.coinmarketcap.com/). Once you have the API key, replace `'your_api_key_here'` in the notebook with your actual key:
+
+```python
+headers = {
+  'Accepts': 'application/json',
+  'X-CMC_PRO_API_KEY': 'your_api_key_here',
+}
+```
 
 ## Instructions
 
@@ -30,46 +35,39 @@ To use this script, you'll need a CoinMarketCap API key. You can obtain one by s
 
    ```bash
    git clone https://github.com/shekharkshitij/Cryptocurrency-Data-Analysis.git
-   cd cryptocurrency-data-fetcher
+   cd Cryptocurrency-Data-Analysis
    ```
 
 2. **Update API Key:**
 
-   Open the script `/Automate API Extraction + Appending Data + Extra -- Project.ipynb` and replace the placeholder API key with your actual CoinMarketCap API key:
+   Open the notebook `Automate API Extraction + Appending Data + Extra -- Project.ipynb` and replace the placeholder API key with your actual CoinMarketCap API key as shown above.
 
-   ```python
-   headers = {
-     'Accepts': 'application/json',
-     'X-CMC_PRO_API_KEY': 'your_api_key_here',
-   }
-   ```
+3. **Run the Notebook:**
 
-3. **Run the Script:**
-
-   You can run the script by executing:
+   You can run the notebook by executing:
 
    ```bash
    jupyter notebook "Automate API Extraction + Appending Data + Extra -- Project.ipynb"
    ```
 
-   Make sure you are in the directory where the script is located.
+   Ensure that you are in the directory where the notebook is located.
 
 4. **View the Data:**
 
-   The script will retrieve the latest cryptocurrency data and save it in a pandas DataFrame. The data will be normalized and displayed for easy viewing. 
+   The notebook will retrieve the latest cryptocurrency data and save it in a pandas DataFrame. The data will be normalized and displayed for easy viewing.
 
-   It will also save the data to a CSV file for future reference. The CSV file path can be modified in the script as needed.
+   The data can also be saved to a CSV file for future reference. You can modify the CSV file path in the notebook as needed.
 
 5. **Visualize the Data:**
 
-   The script includes functionality to visualize the data trends over time using Seaborn and Matplotlib. 
+   The notebook includes functionality to visualize data trends over time using Seaborn and Matplotlib.
 
    It generates a line plot for Bitcoin's price over time and a point plot for percentage changes over different periods.
 
 ## Notes
 
-- If you encounter a `KeyError` regarding the `'data'` key, it may be due to exceeding the API rate limit or a problem with your API key.
-- Make sure to adjust the rate limits and API usage as per your subscription plan with CoinMarketCap.
+- If you encounter a `KeyError` regarding the `'data'` key, it may be due to exceeding the API rate limit or an issue with your API key.
+- Ensure that you adjust the rate limits and API usage according to your subscription plan with CoinMarketCap.
 
 ## Troubleshooting
 
@@ -93,5 +91,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - This project uses the CoinMarketCap API for data retrieval.
 - Visualization is done using Matplotlib and Seaborn.
-
-```
